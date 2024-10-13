@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Subscription</title>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #121212;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        color: #e0e0e0;
+      }
+      .subscription-container {
+        background-color: #1e1e1e;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 90%;
+        max-width: 1000px;
+      }
+      h1 {
+        color: #bb86fc;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        text-shadow: 0 2px 4px rgba(187, 134, 252, 0.3);
+      }
+      p {
+        color: #b0b0b0;
+        font-size: 1.1em;
+        margin-bottom: 30px;
+      }
+      .plans {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .plan {
+        background-color: #2c2c2c;
+        border: 1px solid #3d3d3d;
+        border-radius: 12px;
+        padding: 25px;
+        width: calc(33% - 20px);
+        min-width: 250px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+      .plan:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(187, 134, 252, 0.2);
+      }
+      .plan h2 {
+        color: #03dac6;
+        font-size: 1.8em;
+        margin-bottom: 15px;
+      }
+      .plan p {
+        color: #ffffff;
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      .plan ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 25px;
+      }
+      .plan ul li {
+        margin: 12px 0;
+        color: #b0b0b0;
+        font-size: 1.1em;
+      }
+      .subscribe-btn {
+        background-color: #bb86fc;
+        color: #000000;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 1.1em;
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 4px 10px rgba(187, 134, 252, 0.3);
+      }
+      .subscribe-btn:hover {
+        background-color: #03dac6;
+        transform: scale(1.05);
+      }
+      #confirmation-message {
+        margin-top: 30px;
+        font-weight: bold;
+        color: #03dac6;
+        font-size: 1.2em;
+      }
+</style>
+<body>
+  <div class="subscription-container">
+    <h1>Upgrade to Premium</h1>
+    <p>Get exclusive access to premium features and more perks!</p>
+    
+    <div class="plans">
+      <div class="plan">
+        <h2>Basic Plan</h2>
+        <p> $5/month</p>
+        <ul>
+          <li>Access to basic features</li>
+          <li>Email support</li>
+        </ul>
+        <button class="subscribe-btn" data-plan="Basic">Subscribe</button>
+      </div>
+      
+      <div class="plan">
+        <h2>Pro Plan</h2>
+        <p>$15/month</p>
+        <ul>
+          <li>All Basic features</li>
+          <li>Priority support</li>
+          <li>Access to premium content</li>
+        </ul>
+        <button class="subscribe-btn" data-plan="Pro">Subscribe</button>
+      </div>
+      
+      <div class="plan">
+        <h2>Ultimate Plan</h2>
+        <p>$25/month</p>
+        <ul>
+          <li>All Pro features</li>
+          <li>Dedicated support</li>
+          <li>Exclusive resources</li>
+        </ul>
+        <button class="subscribe-btn" data-plan="Ultimate">Subscribe</button>
+      </div>
+    </div>
+    
+    <p id="confirmation-message"></p>
+  </div>
+  
+  <script>document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.subscribe-btn');
+    const confirmationMessage = document.getElementById('confirmation-message');
+  
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const plan = button.getAttribute('data-plan');
+        confirmationMessage.textContent = "Thank you for subscribing to the Plan!";
+      });
+    });
+  });</script>
+</body>
+</html>

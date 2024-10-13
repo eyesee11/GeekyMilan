@@ -1,0 +1,123 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css);
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #000000;
+    line-height: 1.6;
+  }
+  
+  .header {
+    background-color: #343a40;
+    padding: 20px 0;
+    height: auto;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('HeaderBg.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+  }
+  .brand {
+    font-size: 1.8em;
+    text-decoration: none;
+    color: white;
+  }
+  .header-banner {
+    display: grid;
+    place-items: center;
+  }
+  
+  .header-banner h1 {
+    font-size: 2.5em;
+    color: white;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .header-banner p {
+    font-size: 1.2em;
+  }
+  
+  .about-us {
+    background: #f0f0f0;
+    padding: 50px 20px;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: auto;
+    text-align: left;
+  }
+  
+  .about-us h2 {
+    margin-top: 20px;
+    font-size: 2em;
+    color: #343a40;
+  }
+  
+  .about-us p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+  }
+  
+  .about-us ul {
+    list-style-type: square;
+    padding-left: 20px;
+  }
+  
+  .team {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .team-member {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .team-member h3 {
+    margin: 10px 0 5px 0;
+    font-size: 1.2em;
+  }
+  
+  .team-member p {
+    font-size: 1em;
+    color: #777;
+  }
+  
+  .footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .social-icon {
+    color: white; /* Make the icons white */
+    font-size: 1.5em;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .social-icon:hover {
+    color: #ff6f61; /* Change color on hover */
+    transform: scale(1.2); /* Scale the icon on hover */
+  }

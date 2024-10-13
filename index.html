@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GEEKYमिलन - Dating Site</title>
+  <script src="https://kit.fontawesome.com/a7a8925472.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Georgia&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <!-- <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Navigation styles */
+    .navbar {
+      background-color: #f8f8f8;
+      padding: 1rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .brand {
+      font-family: 'Georgia', serif;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin-left: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    /* Header and banner styles */
+    .header {
+      background-image: url('path-to-your-banner-image.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .banner h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .banner p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    #start {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #start:hover {
+      background-color: #45a049;
+    }
+
+    /* Model section styles */
+    .model {
+      padding: 4rem 0;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+
+    #heading {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Features section styles */
+    .heading-features {
+      text-align: center;
+      padding: 4rem 0 2rem;
+    }
+
+    #down {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .features {
+      flex-basis: calc(33.333% - 2rem);
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .features #head {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    /* Search box styles */
+    .search-box {
+      background-color: #f0f0f0;
+      padding: 4rem 0;
+    }
+
+    .match {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .match #tagline {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .match input {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .match button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .match button:hover {
+      background-color: #45a049;
+    }
+
+    /* Places section styles */
+    .places {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .places #bold {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .places > div {
+      margin-top: 2rem;
+    }
+
+    .places button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .places button:hover {
+      background-color: #45a049;
+    }
+
+    /* Scroll to top button styles */
+    #scrollToTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
+
+    #scrollToTopBtn:hover {
+      background-color: #45a049;
+    }
+
+    /* Footer styles */
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    .footer-content h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .social-icons {
+      margin-top: 1rem;
+    }
+
+    .social-icon {
+      color: white;
+      font-size: 1.5rem;
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
+
+    /* Popup styles */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(5px);
+      z-index: 1000;
+    }
+
+    .popup-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #1e1e1e;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      max-width: 90%;
+      width: 1000px;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .close-popup {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #bb86fc;
+    }
+
+    .subscription-container {
+      color: #e0e0e0;
+      text-align: center;
+    }
+
+    .subscription-container h1 {
+      color: #bb86fc;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 4px rgba(187, 134, 252, 0.3);
+    }
+
+    .subscription-container p {
+      color: #b0b0b0;
+      font-size: 1.1em;
+      margin-bottom: 30px;
+    }
+
+    .plans {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .plan {
+      background-color: #2c2c2c;
+      border: 1px solid #3d3d3d;
+      border-radius: 12px;
+      padding: 25px;
+      width: calc(33% - 20px);
+      min-width: 250px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .plan:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(187, 134, 252, 0.2);
+    }
+
+    .plan h2 {
+      color: #03dac6;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+
+    .plan p {
+      color: #ffffff;
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .plan ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 25px;
+    }
+
+    .plan ul li {
+      margin: 12px 0;
+      color: #b0b0b0;
+      font-size: 1.1em;
+    }
+
+    .subscribe-btn {
+      background-color: #bb86fc;
+      color: #000000;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 10px rgba(187, 134, 252, 0.3);
+    }
+
+    .subscribe-btn:hover {
+      background-color: #03dac6;
+      transform: scale(1.05);
+    }
+
+    #confirmation-message {
+      margin-top: 30px;
+      font-weight: bold;
+      color: #03dac6;
+      font-size: 1.2em;
+    }
+  </style> -->
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="navbar-container">
+      <a href="#" class="brand">GEEKYमिलन</a>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="ABOUTUS.html">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="signup.html">Sign in</a></li>
+        <li><a href="#" id="premium-btn">Premium</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="header">
+    <div class="banner">
+      <h1>GEEKYमिलन</h1>
+      <p>MANAGE YOUR DATES (Pun Intended)</p>
+      <button type="submit" id="start">Get Started <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </div>
+
+  <div class="model">
+    <span id="heading">Match, Meet, Make Memories</span>
+    <p>Find your perfect half with Geekyमिलन</p>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.23/build/spline-viewer.js"></script>
+    <spline-viewer url="https://prod.spline.design/7tm6noF297tOmnus/scene.splinecode"></spline-viewer>
+  </div>
+
+  <div class="heading-features" id="services">
+    <span id="down">Our Services</span>
+    <p>Discover the features that make Geekyमिलन the ultimate platform for college dating</p>
+  </div>
+
+  <div class="services">
+    <div class="features">
+      <span id="head">AI-Based Match Suggestions</span>
+      <span>Showcase how the platform uses advanced algorithms to match users based on personality traits, interests, and behaviors, leading to highly compatible connections.</span>
+    </div>
+    <div class="features">
+      <span id="head">Verified Profiles</span>
+      <span>Highlight that users are verified through identity checks (e.g., social media, government ID, or video verification) to ensure safety and authenticity on the platform.</span>
+    </div>
+    <div class="features">
+      <span id="head">Advanced Search Filters</span>
+      <span>Promote the ability to search for matches using detailed filters like location, interests, relationship goals, lifestyle preferences, and more, giving users control over their search.</span>
+    </div>
+    <div class="features">
+      <span id="head">Privacy and Safety Features</span>
+      <span>Emphasize privacy options like anonymous browsing, photo blurring, and the ability to control who sees their profile. Also, include safety tools like in-app reporting and an emergency button.</span>
+    </div>
+    <div class="features">
+      <span id="head">Real-Time Messaging and Video Chat</span>
+      <span>Display features like secure messaging and video chat options that allow users to communicate seamlessly and get to know each other before meeting in person.</span>
+    </div>
+    <div class="features">
+      <span id="head">Community and Interest-Based Groups</span>
+      <span>Highlight group-based features or events where users can meet others with similar interests, whether through forums, virtual events, or niche communities (e.g., for fitness enthusiasts or pet lovers).</span>
+    </div>
+  </div>
+
+  <div class="search-box" id="fillout">
+    <div class="match">
+      <span id="tagline">Discover The Love That Lasts Forever</span>
+      <span>Love is out there let's help you find it</span><br>
+      <input type="text" placeholder="Enter Name">
+      <input type="text" placeholder="Enter Age">
+      <input type="text" placeholder="Enter City">
+      <input type="text" placeholder="Enter DOB">
+      <button type="submit">Search <i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+  </div>
+
+  <div class="places">
+    <span id="bold">Meet Your Match</span>
+    <span>Find your perfect match and plan your first date at the best places</span>
+    <div class="area1" id="common1">
+      <button type="submit">Restaurants</button>
+    </div>
+    <div class="area2" id="common2"> 
+      <button type="submit">Cafes</button>
+    </div>
+    <div class="area3" id="common3">
+      <button type="submit">Malls</button>
+    </div> 
+    <div class="area4" id="common4">
+      <button type="submit">Bars & Bistro</button>
+    </div>
+    <div class="area5" id="common5">
+      <button type="submit">Clubbing</button>
+    </div>
+  </div>
+
+  <button id="scrollToTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <footer class="footer">
+    <p>&copy; 2024 GEEKYमिलन. All rights reserved.</p>
+    <div class="footer-container">
+      <div class="footer-content">
+        <h3>GEEKYमिलन</h3>
+        <p>Connecting hearts around the world. Follow us on social media:</p>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com" target="_blank" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Premium Subscription Popup -->
+  <div class="popup-overlay" id="popup-overlay">
+    <div class="popup-content">
+      <span class="close-popup" id="close-popup">&times;</span>
+      <div class="subscription-container">
+        <h1>Upgrade to Premium</h1>
+        <p>Get exclusive access to premium features and more perks!</p>
+        
+        <div class="plans">
+          <div class="plan">
+            <h2>Basic Plan</h2>
+            <p>$5/month</p>
+            <ul>
+              <li>Access to basic features</li>
+              <li>Email support</li>
+            </ul>
+            <button class="subscribe-btn" data-plan="Basic">Subscribe</button>
+          </div>
+          
+          <div class="plan">
+            <h2>Pro Plan</h2>
+            <p>$15/month</p>
+            <ul>
+              <li>All Basic features</li>
+              <li>Priority support</li>
+              <li>Access to premium content</li>
+            </ul>
+            <button class="subscribe-btn" data-plan="Pro">Subscribe</button>
+          </div>
+          
+          <div class="plan">
+            <h2>Ultimate Plan</h2>
+            <p>$25/month</p>
+            <ul>
+              <li>All Pro features</li>
+              <li>Dedicated support</li>
+              <li>Exclusive resources</li>
+            </ul>
+            <button class="subscribe-btn" data-plan="Ultimate">Subscribe</button>
+          </div>
+        </div>
+        
+        <p id="confirmation-message"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Scroll to fillout section
+    document.getElementById("start").onclick = function() {
+      document.getElementById("fillout").scrollIntoView({behavior: 'smooth'});
+    };
+
+    // Scroll to top button functionality
+    let mybutton = document.getElementById("scrollToTopBtn");
+    window.onscroll = function() {
+      scrollFunction();
+    };
+    function scrollFunction() {
+      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    mybutton.onclick = function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    // Meet Your Match buttons functionality
+    document.getElementById("common1").onclick = function() {
+      window.location.href = "https://maps.app.goo.gl/vZenBdC8qDHFMiGd9";
+    };
+    document.getElementById("common2").onclick = function() {
+      window.location.href = "https://maps.app.goo.gl/qmGkvv1GrCqWnMe8A";
+    };
+    document.getElementById("common3").onclick = function() {
+      window.location.href = "https://maps.app.goo.gl/kVJ5U1pp3FLL7ewG9";
+    };
+    document.getElementById("common4").onclick = function() {
+      window.location.href = "https://maps.app.goo.gl/LEkarDFkhfsygmwW9";
+    };
+    document.getElementById("common5").onclick = function() {
+      window.location.href = "https://maps.app.goo.gl/8xY2n9NxsHtN2NeV9";
+    };
+
+    // Premium popup functionality
+    const premiumBtn = document.getElementById('premium-btn');
+    const popupOverlay = document.getElementById('popup-overlay');
+    const closePopup = document.getElementById('close-popup');
+    const subscribeButtons = document.querySelectorAll('.subscribe-btn');
+    const confirmationMessage = document.getElementById('confirmation-message');
+
+    premiumBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      popupOverlay.style.display = 'block';
+      document.body.style.overflow = 'hidden'; // Prevent scrolling
+    });
+
+    closePopup.addEventListener('click', () => {
+      popupOverlay.style.display = 'none';
+      document.body.style.overflow = 'auto'; // Allow scrolling
+    });
+
+    subscribeButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const plan = button.getAttribute('data-plan');
+        confirmationMessage.textContent = `Thank you for subscribing to the ${plan} Plan!`;
+      });
+    });
+
+    // Close popup when clicking outside the content
+    popupOverlay.addEventListener('click', (e) => {
+      if (e.target === popupOverlay) {
+        popupOverlay.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Allow scrolling
+      }
+    });
+    let lastScrollTop = 0; // Keep track of last scroll position
+  const navbar = document.getElementById('navbar');
+
+  window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      // Scrolling down
+      navbar.classList.add('hidden');
+    } else {
+      // Scrolling up
+      navbar.classList.remove('hidden');
+    }
+    
+    lastScrollTop = scrollTop; // Update last scroll position
+  });
+  </script>
+</body>
+</html>
