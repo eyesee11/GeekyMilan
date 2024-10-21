@@ -7,396 +7,14 @@
   <script src="https://kit.fontawesome.com/a7a8925472.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Georgia&display=swap" rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
-  <!-- <style>
-    /* Reset and base styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Lato', sans-serif;
-      line-height: 1.6;
-      color: #333;
-    }
-
-    /* Navigation styles */
-    .navbar {
-      background-color: #f8f8f8;
-      padding: 1rem 0;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .navbar-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    .brand {
-      font-family: 'Georgia', serif;
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #333;
-      text-decoration: none;
-    }
-
-    .nav-links {
-      display: flex;
-      list-style: none;
-    }
-
-    .nav-links li {
-      margin-left: 2rem;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
-
-    /* Header and banner styles */
-    .header {
-      background-image: url('path-to-your-banner-image.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-    }
-
-    .banner h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .banner p {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-    }
-
-    #start {
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    #start:hover {
-      background-color: #45a049;
-    }
-
-    /* Model section styles */
-    .model {
-      padding: 4rem 0;
-      text-align: center;
-      background-color: #f9f9f9;
-    }
-
-    #heading {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    /* Features section styles */
-    .heading-features {
-      text-align: center;
-      padding: 4rem 0 2rem;
-    }
-
-    #down {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      padding: 2rem;
-    }
-
-    .features {
-      flex-basis: calc(33.333% - 2rem);
-      background-color: #fff;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .features #head {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      display: block;
-    }
-
-    /* Search box styles */
-    .search-box {
-      background-color: #f0f0f0;
-      padding: 4rem 0;
-    }
-
-    .match {
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .match #tagline {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      display: block;
-    }
-
-    .match input {
-      width: 100%;
-      padding: 0.75rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-    }
-
-    .match button {
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .match button:hover {
-      background-color: #45a049;
-    }
-
-    /* Places section styles */
-    .places {
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-
-    .places #bold {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      display: block;
-    }
-
-    .places > div {
-      margin-top: 2rem;
-    }
-
-    .places button {
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .places button:hover {
-      background-color: #45a049;
-    }
-
-    /* Scroll to top button styles */
-    #scrollToTopBtn {
-      display: none;
-      position: fixed;
-      bottom: 20px;
-      right: 30px;
-      z-index: 99;
-      font-size: 18px;
-      border: none;
-      outline: none;
-      background-color: #4CAF50;
-      color: white;
-      cursor: pointer;
-      padding: 15px;
-      border-radius: 4px;
-    }
-
-    #scrollToTopBtn:hover {
-      background-color: #45a049;
-    }
-
-    /* Footer styles */
-    .footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 2rem 0;
-    }
-
-    .footer-content h3 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .social-icons {
-      margin-top: 1rem;
-    }
-
-    .social-icon {
-      color: white;
-      font-size: 1.5rem;
-      margin: 0 0.5rem;
-      text-decoration: none;
-    }
-
-    /* Popup styles */
-    .popup-overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(5px);
-      z-index: 1000;
-    }
-
-    .popup-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #1e1e1e;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      max-width: 90%;
-      width: 1000px;
-      max-height: 90vh;
-      overflow-y: auto;
-    }
-
-    .close-popup {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 24px;
-      cursor: pointer;
-      color: #bb86fc;
-    }
-
-    .subscription-container {
-      color: #e0e0e0;
-      text-align: center;
-    }
-
-    .subscription-container h1 {
-      color: #bb86fc;
-      font-size: 2.5em;
-      margin-bottom: 10px;
-      text-shadow: 0 2px 4px rgba(187, 134, 252, 0.3);
-    }
-
-    .subscription-container p {
-      color: #b0b0b0;
-      font-size: 1.1em;
-      margin-bottom: 30px;
-    }
-
-    .plans {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .plan {
-      background-color: #2c2c2c;
-      border: 1px solid #3d3d3d;
-      border-radius: 12px;
-      padding: 25px;
-      width: calc(33% - 20px);
-      min-width: 250px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    .plan:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(187, 134, 252, 0.2);
-    }
-
-    .plan h2 {
-      color: #03dac6;
-      font-size: 1.8em;
-      margin-bottom: 15px;
-    }
-
-    .plan p {
-      color: #ffffff;
-      font-size: 1.5em;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-
-    .plan ul {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 25px;
-    }
-
-    .plan ul li {
-      margin: 12px 0;
-      color: #b0b0b0;
-      font-size: 1.1em;
-    }
-
-    .subscribe-btn {
-      background-color: #bb86fc;
-      color: #000000;
-      border: none;
-      padding: 12px 25px;
-      border-radius: 25px;
-      cursor: pointer;
-      font-size: 1.1em;
-      font-weight: bold;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      box-shadow: 0 4px 10px rgba(187, 134, 252, 0.3);
-    }
-
-    .subscribe-btn:hover {
-      background-color: #03dac6;
-      transform: scale(1.05);
-    }
-
-    #confirmation-message {
-      margin-top: 30px;
-      font-weight: bold;
-      color: #03dac6;
-      font-size: 1.2em;
-    }
-  </style> -->
+  
 </head>
 <body>
   <nav class="navbar" id="navbar">
     <div class="navbar-container">
-      <a href="#" class="brand">GEEKYमिलन</a>
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="GEEKYमिलन Logo" style="height: 65px;">
+      </a>
       <ul class="nav-links">
         <li><a href="#">Home</a></li>
         <li><a href="ABOUTUS.html">About</a></li>
@@ -405,13 +23,16 @@
         <li><a href="#" id="premium-btn">Premium</a></li>
       </ul>
     </div>
+    <!-- <a href="#" class="profile-icon">
+      <i class="fas fa-user"></i>
+    </a> -->
   </nav>
-
+  
   <div class="header">
     <div class="banner">
       <h1>GEEKYमिलन</h1>
-      <p>MANAGE YOUR DATES (Pun Intended)</p>
-      <button type="submit" id="start">Get Started <i class="fa-solid fa-arrow-right"></i></button>
+      <p>Bookmark The Hearts</p>
+      <button type="submit" id="start" onclick="document.getElementById('fillout').scrollIntoView({behavior: 'smooth'});">Get Started <i class="fa-solid fa-arrow-down"></i></button>
     </div>
   </div>
 
@@ -426,6 +47,30 @@
     <span id="down">Our Services</span>
     <p>Discover the features that make Geekyमिलन the ultimate platform for college dating</p>
   </div>
+
+
+
+
+  <!-- Chatbot integration -->
+  <div id="chat-icon" onclick="toggleChat()">
+    <i class="fas fa-comments" style="color:#1a0033; font-size :24px;"></i>
+</div>
+
+<div id="chatbot-container" class="chatbot-closed">
+    <div id="chatbot-header">
+       <span>Chat with Us!</span>
+       <button onclick="toggleChat()" style="background:none;border:none;color:white;">&times;</button>
+   </div>
+   <div id="chatbot-messages"></div>
+   <div id="chatbot-input">
+       <input type="text" id="user-input" placeholder="Type your message...">
+       <button id="send-button" onclick="sendMessage()">Send</button>
+   </div>
+</div>
+
+
+
+
 
   <div class="services">
     <div class="features">
@@ -461,8 +106,9 @@
       <input type="text" placeholder="Enter Name">
       <input type="text" placeholder="Enter Age">
       <input type="text" placeholder="Enter City">
-      <input type="text" placeholder="Enter DOB">
+      <input type="date" id="date-picker" class="search-input">
       <button type="submit">Search <i class="fa-solid fa-magnifying-glass"></i></button>
+      <button type="submit" onclick="window.location.href='weather.html'">Check Weather <i class="fa-solid fa-eye"></i></button>
     </div>
   </div>
 
@@ -610,8 +256,9 @@
 
     subscribeButtons.forEach(button => {
       button.addEventListener('click', () => {
-        const plan = button.getAttribute('data-plan');
-        confirmationMessage.textContent = `Thank you for subscribing to the ${plan} Plan!`;
+      const plan = button.getAttribute('data-plan');
+      confirmationMessage.textContent = `Thank you for subscribing to the ${plan} Plan!`;
+      window.location.href = 'payment.html';
       });
     });
 
@@ -638,6 +285,97 @@
     
     lastScrollTop = scrollTop; // Update last scroll position
   });
+
+
+  // Chatbot functionality
+  const url = 'https://cheapest-gpt-4-turbo-gpt-4-vision-chatgpt-openai-ai-api.p.rapidapi.com/v1/chat/completions';
+const options = {
+    method: 'POST',
+    headers: {
+        'x-rapidapi-key': 'c92a8ee81cmsh32da64c2c6b94f3p195216jsn262d567bed45', // Your RapidAPI key
+        'x-rapidapi-host': 'cheapest-gpt-4-turbo-gpt-4-vision-chatgpt-openai-ai-api.p.rapidapi.com',
+        'Content-Type': 'application/json'
+    }
+};
+//to open the chatbot container
+function toggleChat() {
+  const chatbotContainer = document.getElementById('chatbot-container');
+  const isOpen = chatbotContainer.classList.contains('chatbot-open');
+
+  if (isOpen) {
+      chatbotContainer.classList.remove('chatbot-open');
+      chatbotContainer.classList.add('chatbot-closed');
+      chatbotContainer.style.opacity = '0';
+      chatbotContainer.style.visibility = 'hidden';
+  } else {
+      chatbotContainer.classList.remove('chatbot-closed');
+      chatbotContainer.classList.add('chatbot-open');
+      chatbotContainer.style.opacity = '1';
+      chatbotContainer.style.visibility = 'visible';
+  }
+}
+//making it responsive
+async function sendMessage() {
+    const userInput = document.getElementById('user-input');
+    const messageText = userInput.value.trim();
+
+    if (messageText) {
+        const messagesDiv = document.getElementById('chatbot-messages');
+        
+        // Append user message
+        const userMessageDiv = document.createElement('div');
+        userMessageDiv.className = 'message user-message';
+        userMessageDiv.textContent = messageText;
+        messagesDiv.appendChild(userMessageDiv);
+        
+        // Clear input
+        userInput.value = '';
+
+        // Show loading message
+        const loadingMessageDiv = document.createElement('div');
+        loadingMessageDiv.className = 'message bot-message';
+        loadingMessageDiv.textContent = "Thinking...";
+        messagesDiv.appendChild(loadingMessageDiv);
+        
+        // Prepare body for API request
+        const body = JSON.stringify({
+            messages: [
+                {
+                    role: 'user',
+                    content: messageText
+                }
+            ],
+            model: 'gpt-4o', // Specify your model here
+            max_tokens: 100,
+            temperature: 0.9
+        });
+
+        try {
+            const response = await fetch(url, { ...options, body });
+            const data = await response.json();
+
+            // Remove loading message
+            messagesDiv.removeChild(loadingMessageDiv);
+
+            // Append bot response
+            const botMessageDiv = document.createElement('div');
+            botMessageDiv.className = 'message bot-message';
+            botMessageDiv.textContent = data.choices[0].message.content; // Adjust according to the API response structure
+            messagesDiv.appendChild(botMessageDiv);
+            
+            // Scroll to bottom of messages
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+        } catch (error) {
+            console.error(error);
+            alert('Error fetching response from API. Please try again.');
+            
+            // Remove loading message on error
+            messagesDiv.removeChild(loadingMessageDiv);
+        }
+    }
+}
+
   </script>
 </body>
 </html>

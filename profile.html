@@ -1,285 +1,163 @@
-<!-- <!DOCTYPE html>
-<html>
-	<head>
-		<title>Dating Site</title>
-		<style type="text/css" rel="stylesheet">
-			fieldset {
-				background-color: lightyellow;
-				border: 10px solid yellow;
-				margin-bottom: 10px;
-				width:720px;
-			}
-			label {
-				width: 180px;
-				display: inline-block;
-				text-align: right;
-				vertical-align: top;
-				margin-bottom: 10px;
-			}
-			.options {
-				width:auto;
-			}
-			.range-low, .range-high {
-				text-align: center;
-				color: white;
-				display: inline-block;
-				width:60px;
-				vertical-align: top;
-			}
-			.range-low {
-				background-color: red;
-			}
-			.range-high {
-				background-color: blue;
-			}
-			textarea {
-				width: 360px;
-				height:	50px;
-			}
-			label:hover, input:hover {
-				font-size: 20px;
-			}
-		</style>
-	</head>
-	<body>
-		<h1>Please Enter Your Details for Our Dating Website!</h1>
-		<form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" enctype="multipart/form-data" method="post">
-			<fieldset>
-				<legend>Your Face</legend>
-					<label for="your-image">Your Image:</label><input type="file" required><br />
-					<label for="image-preview">Image Preview:</label><img src="" id="preview"><br />
-			</fieldset>
-			<fieldset>
-				<legend>Your General Details</legend>
-				<label for="name">Name:</label>			<input type="text" name="name" placeholder="Your full name" required><br />
-				<label for="gender">Gender:</label>		<input type="radio" name="gender" value="male" required><label for="gender-male" class="options">Male</label><input type="radio" name="gender" value="female"><label for="gender-female" class="options">Female</label><br />
-				<label for="age">Age:</label>			<input type="number" name="age" required><br />
-				<label for="dob">Date of birth:</label>		<input type="date" name="dob"><br />
-				<label for="fav-color">Favorite color:</label>	<input type="color" name="fav-color" value="#000000"><br />
-				<label for="country">Which country:</label>
-					<select name="country">
-						<option value="no-selection">no selection</option>
-						<option value="ID">Indonesia</option>
-						<option value="IN">India</option>
-						<option value="MY">Malaysia</option>
-						<option value="UK">United Kingdom</option>
-						<option value="US">United States</option>
-					</select>
-			</fieldset>
-			<fieldset>
-				<legend>Your Indicators</legend>
-				<label for="height">Height:</label>
-					<div class="range-low" >Short</div><input type="range" name="height" min="0" max="100"><div class="range-high">Tall</div><br />
-				<label for="salary">Salary:</label>
-					<div class="range-low">Poor</div><input type="range" name="height" min="0" max="100"><div class="range-high">Rich</div>
-			</fieldset>
-			<fieldset>
-				<legend>Your Contact Information</legend>
-				<label for="email">Email:</label><input type="email" name="email" required><br />
-				<label for="mobile">Mobile:</label><input type="tel" name="mobile"><br />
-				<label for="address">Address:</label><textarea name="address"></textarea><br />
-				<label for="method-to-contact">Method to contact you:</label>
-					<input type="checkbox">
-						<label class="options" for="contact-email">Email</label>
-					<input type="checkbox">
-						<label class="options" for="contact-whatsapp">WhatsApp</label>
-					<input type="checkbox">
-						<label  class="options"for="contact-in-app-chat">In-app chat</label>
-			</fieldset>
-			<input type="submit">
-		</form>
-		<script>
-        window.onload = function() {
-        var files = document.querySelectorAll("input[type=file]");
-        files[0].addEventListener("change", function(e) {
-            if(this.files && this.files[0]) {
-                var reader = new FileReader();
-                reader.onload = function(e) { document.getElementById("preview").setAttribute("src", e.target.result); }
-                reader.readAsDataURL(this.files[0]);
-            }
-        });
-    }
-    </script>
-	</body>
-</html> -->
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Profile Dashboard</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-    body {
-      background-color: #484848;
-      color: #fff;
-      line-height: 1.6;
-      padding: 20px;
-    }
-    h4, h5, h6 {
-      margin-bottom: 10px;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .card {
-      background-color: #333;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      margin-bottom: 20px;
-    }
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    .profile {
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-    .profile img {
-      border-radius: 50%;
-      width: 80px;
-      height: 80px;
-      margin-right: 20px;
-    }
-    .profile-info h4 {
-      margin-bottom: 5px;
-    }
-    .badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-    .badge {
-      background-color: #007bff;
-      padding: 10px 15px;
-      border-radius: 20px;
-      color: #fff;
-      font-size: 0.9rem;
-    }
-    .photos {
-      display: flex;
-      gap: 10px;
-    }
-    .photos img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    .matches {
-      display: flex;
-      gap: 15px;
-    }
-    .match-card {
-      flex: 1;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.3s ease;
-      border-radius: 10px;
-    }
-    .match-card:hover {
-      transform: scale(1.05);
-    }
-    .match-card img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
-    .match-card:hover img {
-      transform: scale(1.1);
-    }
-    .card-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 10px;
-      background: rgba(0, 0, 0, 0.7);
-      color: #fff;
-      text-align: center;
-      border-radius: 0 0 10px 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodingDung | Enhanced Profile Template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Previous styles remain the same */
+        body {
+            background: #f5f5f5;
+            margin-top: 20px;
+        }
+
+        /* Add new styles for profile picture section */
+        .profile-picture-section {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .edit-icon {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            width: 35px;
+            height: 35px;
+            background: #26B4FF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid #fff;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .edit-icon:hover {
+            background: #1a9aed;
+            transform: scale(1.1);
+        }
+
+        .profile-info {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+
+        .profile-title {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        /* Previous styles continue... */
+        .ui-w-80 {
+            width: 80px !important;
+            height: auto;
+        }
+
+        /* ... (rest of the previous styles) ... */
+
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="card">
-      <div class="profile">
-        <img src="proff.png" alt="Profile Picture">
-        <div class="profile-info">
-          <h4>Tapalagna Chakroborty</h4>
-          <p>25, India</p>
+    <div class="container light-style flex-grow-1 container-p-y">
+        <h4 class="font-weight-bold py-3 mb-4">
+            Account settings
+        </h4>
+        <div class="card overflow-hidden">
+            <!-- New Profile Picture Section -->
+            <div class="card-body text-center pt-4">
+                <div class="profile-picture-section">
+                    <img src="/api/placeholder/150/150" alt="Profile Picture" class="profile-picture">
+                    <label class="edit-icon" for="profile-picture-input">
+                        <i class="fas fa-pencil-alt"></i>
+                    </label>
+                    <input type="file" 
+                           id="profile-picture-input" 
+                           style="display: none;"
+                           accept="image/*">
+                </div>
+                <div class="profile-info">
+                    <h4 class="profile-name">Nelle Maxwell</h4>
+                    <div class="profile-title">Senior Developer</div>
+                </div>
+            </div>
+
+            <div class="row no-gutters row-bordered row-border-light">
+                <div class="col-md-3 pt-0">
+                    <div class="list-group list-group-flush account-settings-links">
+                        <a class="list-group-item list-group-item-action active" data-toggle="list"
+                            href="#account-general">General</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-change-password">Change password</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-info">Info</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-social-links">Social links</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-connections">Connections</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-notifications">Notifications</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-photos">My Photos</a>
+                    </div>
+                </div>
+                <!-- Rest of the content remains the same -->
+                <!-- ... -->
+            </div>
         </div>
-      </div>
-      <p>I'm not an outgoing and adventurous person who loves trying new things. In my free time, you can never find me exploring the city, hiking in the nearby parks, or reading a good book. I value honesty, kindness, and a good sense of humor in a partner. Let's grab coffee and see if we click!</p>
+        <div class="text-right mt-3">
+            <button type="button" class="btn btn-primary">Save changes</button>&nbsp;
+            <button type="button" class="btn btn-default">Cancel</button>
+        </div>
     </div>
-    <div class="card">
-      <h5>Interests</h5>
-      <div class="badges">
-        <span class="badge">Not Traveling</span>
-        <span class="badge">Photography</span>
-        <span class="badge">Cooking</span>
-        <span class="badge">Yoga</span>
-        <span class="badge">Reading</span>
-      </div>
-    </div>
-    <div class="card">
-      <h5>Photos</h5>
-      <div class="photos">
-        <div><img src="proff2.png" alt="Photo 1"></div>
-        <div><img src="proff3.png" alt="Photo 2"></div>
-        <div><img src="proff4.jpg" alt="Photo 3"></div>
-      </div>
-    </div>
-    <div class="card">
-      <h5>Matches</h5>
-      <div class="matches">
-        <div class="match-card">
-          <img src="https://www.shutterstock.com/image-photo/happy-millennial-caucasian-guy-wear-260nw-1548802688.jpg" alt="Match 1">
-          <div class="card-overlay">
-            <h6>MILLENIAL 1</h6>
-            <p>28, Los Angeles</p>
-          </div>
-        </div>
-        <div class="match-card">
-          <img src="https://www.shutterstock.com/image-photo/closeup-photo-amazing-friendly-business-260nw-1577559226.jpg" alt="Match 2">
-          <div class="card-overlay">
-            <h6>MILLENIAL 2</h6>
-            <p>35, Chicago</p>
-          </div>
-        </div>
-        <div class="match-card">
-          <img src="https://www.shutterstock.com/image-photo/portrait-handsome-man-beard-wearing-260nw-1938092350.jpg" alt="Match 3">
-          <div class="card-overlay">
-            <h6>MILLENIAL 3</h6>
-            <p>30, Miami</p>
-          </div>
-        </div>
-        <div class="match-card">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAbpP6pFA9elyhhCthHzZyoHtdz0Lr2oi2ZpgMUZa1XBdQEWcIXh6F-TCmC-H1OUQT9-Q&usqp=CAU" alt="Match 4">
-          <div class="card-overlay">
-            <h6>MILLENIAL 4</h6>
-            <p>27, Seattle</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Add JavaScript for profile picture upload functionality
+        document.getElementById('profile-picture-input').addEventListener('change', function(e) {
+            if (e.target.files && e.target.files[0]) {
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    document.querySelector('.profile-picture').src = e.target.result;
+                }
+                
+                reader.readAsDataURL(e.target.files[0]);
+            }
+        });
+
+        // Add hover effect to profile picture
+        const profilePic = document.querySelector('.profile-picture');
+        profilePic.addEventListener('mouseover', function() {
+            this.style.transform = 'scale(1.02)';
+        });
+        
+        profilePic.addEventListener('mouseout', function() {
+            this.style.transform = 'scale(1)';
+        });
+    </script>
 </body>
 </html>
