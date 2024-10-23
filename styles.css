@@ -353,25 +353,25 @@ body, html {
     background-image: url("cafe.jpg");
     background-size: cover;
     background-position: center;
-    opacity: 70%;
+    opacity: 100%;
   }
   .area3{
     background-image: url("malls.jpg");
     background-size: cover;
     background-position: center;
-    opacity: 70%;
+    opacity: 100%;
   }
   .area4{
     background-image: url("bars\ and\ bistro.jpg");
     background-size: cover;
     background-position: center;
-    opacity: 70%;
+    opacity: 100%;
   }
   .area5{
     background-image: url("clubs.jpg");
     background-size: cover;
     background-position: center;
-    opacity: 70%;
+    opacity: 100%;
   }
   .places button{
     background: rgba(87, 87, 87, 0.663);
@@ -386,7 +386,7 @@ body, html {
   }
   .places button:hover{
     background: rgba(255, 255, 255, 0.299);
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
   }
   .banner button{
     background-color: rgba(255, 255, 255, 0.11);
