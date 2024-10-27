@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GEEKYमिलन - Dating Site</title>
-  <script src="https://kit.fontawesome.com/a7a8925472.js" crossorigin="anonymous"></script>
+  <!-- <script src="https://kit.fontawesome.com/a7a8925472.js" crossorigin="anonymous"></script> -->
   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Georgia&display=swap" rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
   
@@ -200,12 +200,10 @@
   </div>
 
   <script>
-    // Scroll to fillout section
     document.getElementById("start").onclick = function() {
       document.getElementById("fillout").scrollIntoView({behavior: 'smooth'});
     };
 
-    // Scroll to top button functionality
     let mybutton = document.getElementById("scrollToTopBtn");
     window.onscroll = function() {
       scrollFunction();
@@ -221,7 +219,6 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
-    // Meet Your Match buttons functionality
     document.getElementById("common1").onclick = function() {
       window.location.href = "https://maps.app.goo.gl/vZenBdC8qDHFMiGd9";
     };
@@ -238,7 +235,7 @@
       window.location.href = "https://maps.app.goo.gl/8xY2n9NxsHtN2NeV9";
     };
 
-    // Premium popup functionality
+    //premium popup functionality
     const premiumBtn = document.getElementById('premium-btn');
     const popupOverlay = document.getElementById('popup-overlay');
     const closePopup = document.getElementById('close-popup');
@@ -248,12 +245,12 @@
     premiumBtn.addEventListener('click', (e) => {
       e.preventDefault();
       popupOverlay.style.display = 'block';
-      document.body.style.overflow = 'hidden'; // Prevent scrolling
+      document.body.style.overflow = 'hidden'; 
     });
 
     closePopup.addEventListener('click', () => {
       popupOverlay.style.display = 'none';
-      document.body.style.overflow = 'auto'; // Allow scrolling
+      document.body.style.overflow = 'auto'; 
     });
 
     subscribeButtons.forEach(button => {
@@ -264,37 +261,34 @@
       });
     });
 
-    // Close popup when clicking outside the content
     popupOverlay.addEventListener('click', (e) => {
       if (e.target === popupOverlay) {
         popupOverlay.style.display = 'none';
-        document.body.style.overflow = 'auto'; // Allow scrolling
+        document.body.style.overflow = 'auto'; 
       }
     });
-    let lastScrollTop = 0; // Keep track of last scroll position
+    let lastScrollTop = 0; 
   const navbar = document.getElementById('navbar');
 
   window.addEventListener('scroll', function() {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if (scrollTop > lastScrollTop) {
-      // Scrolling down
       navbar.classList.add('hidden');
     } else {
-      // Scrolling up
       navbar.classList.remove('hidden');
     }
     
-    lastScrollTop = scrollTop; // Update last scroll position
+    lastScrollTop = scrollTop;
   });
 
 
-  // Chatbot functionality
+  //chatbot functionality
   const url = 'https://cheapest-gpt-4-turbo-gpt-4-vision-chatgpt-openai-ai-api.p.rapidapi.com/v1/chat/completions';
 const options = {
     method: 'POST',
     headers: {
-        'x-rapidapi-key': 'c92a8ee81cmsh32da64c2c6b94f3p195216jsn262d567bed45', // Your RapidAPI key
+        'x-rapidapi-key': 'c92a8ee81cmsh32da64c2c6b94f3p195216jsn262d567bed45', 
         'x-rapidapi-host': 'cheapest-gpt-4-turbo-gpt-4-vision-chatgpt-openai-ai-api.p.rapidapi.com',
         'Content-Type': 'application/json'
     }
@@ -324,22 +318,18 @@ async function sendMessage() {
     if (messageText) {
         const messagesDiv = document.getElementById('chatbot-messages');
         
-        // Append user message
         const userMessageDiv = document.createElement('div');
         userMessageDiv.className = 'message user-message';
         userMessageDiv.textContent = messageText;
         messagesDiv.appendChild(userMessageDiv);
         
-        // Clear input
         userInput.value = '';
 
-        // Show loading message
         const loadingMessageDiv = document.createElement('div');
         loadingMessageDiv.className = 'message bot-message';
         loadingMessageDiv.textContent = "Thinking...";
         messagesDiv.appendChild(loadingMessageDiv);
         
-        // Prepare body for API request
         const body = JSON.stringify({
             messages: [
                 {
@@ -347,7 +337,7 @@ async function sendMessage() {
                     content: messageText
                 }
             ],
-            model: 'gpt-4o', // Specify your model here
+            model: 'gpt-4o', 
             max_tokens: 100,
             temperature: 0.9
         });
@@ -356,23 +346,19 @@ async function sendMessage() {
             const response = await fetch(url, { ...options, body });
             const data = await response.json();
 
-            // Remove loading message
             messagesDiv.removeChild(loadingMessageDiv);
 
-            // Append bot response
             const botMessageDiv = document.createElement('div');
             botMessageDiv.className = 'message bot-message';
-            botMessageDiv.textContent = data.choices[0].message.content; // Adjust according to the API response structure
+            botMessageDiv.textContent = data.choices[0].message.content; 
             messagesDiv.appendChild(botMessageDiv);
             
-            // Scroll to bottom of messages
             messagesDiv.scrollTop = messagesDiv.scrollHeight;
 
         } catch (error) {
             console.error(error);
             alert('Error fetching response from API. Please try again.');
             
-            // Remove loading message on error
             messagesDiv.removeChild(loadingMessageDiv);
         }
     }
